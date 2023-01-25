@@ -17,7 +17,8 @@ public record ImageObject(Vertex pos, Vertex velocity
     }
 
     public ImageObject(Vertex pos,Vertex velocity, String fileName){
-        this(pos,velocity,0,0,fileName,null);
+        this(pos,velocity,100,100,fileName,null);
+
     }
 
     public ImageObject(String fileName){
@@ -25,7 +26,7 @@ public record ImageObject(Vertex pos, Vertex velocity
     }
 
     public void paintTo(Graphics g){
-        g.fillRect((int)pos.x, (int)pos.y, (int)100, (int)100);
+        g.drawImage(image(),(int)pos.x, (int)pos.y, null);
     }
 }
 

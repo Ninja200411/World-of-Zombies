@@ -9,6 +9,19 @@ public class Vertex {
         this.y = y;
     }
 
+    public Vertex(double xy) {
+        this.x = xy;
+        this.y = xy;
+    }
+    public double betrag(){
+        return Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+    }
+
+    public void normal(){
+        double factor = Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+        x = x/factor;
+        y = y/factor;
+    }
     public void add(Vertex that) {
         x += that.x;
         y += that.y;
@@ -41,5 +54,13 @@ public class Vertex {
 
     public void setY(double y) {
         this.y = y;
+    }
+
+    @Override
+    public String toString() {
+        return "Vertex{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 }

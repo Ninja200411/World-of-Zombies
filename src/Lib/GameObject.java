@@ -12,7 +12,7 @@ public interface GameObject {
         pos().add(velocity());
     }
     default boolean isAbove(double y) {
-        return pos().y < y;
+        return pos().y+height() < y;
     }
 
     default boolean isAbove(GameObject that) {
@@ -32,9 +32,7 @@ public interface GameObject {
     }
 
     default boolean touches(GameObject that){
-        return
-                ! (    isAbove(that)  || isUnderneath(that)
-                        || isLeftOf(that) || isRightOf(that)    );
+        return !(isAbove(that)||isUnderneath(that) || isLeftOf(that)||isRightOf(that));
     }
 
     default boolean isStandingOnTopOf(GameObject that) {

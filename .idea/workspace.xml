@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9212f75d-5b63-446c-9f67-6ac87242a9b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/WorldGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/AbstractGameObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/FallingImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/GameObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/ImageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/SwingScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/TextObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/Vertex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/gegner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/player.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/playerbullet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lib/Gegener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lib/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lib/PlayerBullet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lib/Stats.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/WorldGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/WorldGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/ImageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/ImageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/TextObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/TextObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Vertex.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -45,14 +48,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/LarsHurst/Documents/Projects/ProjecktGame2dOOSE&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Lib" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.WorldGame">
     <configuration name="SimpleGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="game2d.simple.SimpleGame" />
@@ -95,8 +110,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674127386145</updated>
+      <workItem from="1674140864482" duration="896000" />
+      <workItem from="1674216381891" duration="5602000" />
+      <workItem from="1674295392673" duration="10645000" />
+      <workItem from="1674473140946" duration="873000" />
+      <workItem from="1674551114393" duration="46000" />
+      <workItem from="1674553315969" duration="8936000" />
+      <workItem from="1674564966189" duration="583000" />
+      <workItem from="1674633855354" duration="277000" />
+      <workItem from="1674663060542" duration="420000" />
+      <workItem from="1674679209979" duration="2049000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
