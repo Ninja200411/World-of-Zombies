@@ -46,7 +46,7 @@ public class Stats implements GameObject{
     }
 
     @Override
-    public void paintTo(Graphics g) {
+    public void paintTo(Graphics g, Vertex translate) {
         String[] teiltext = text.split("\n");
         g.setFont(new Font(fontName, Font.PLAIN, fontSize));
         for (int i = 0; i < teiltext.length; i++) {

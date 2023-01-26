@@ -26,6 +26,10 @@ public class Vertex {
         x += that.x;
         y += that.y;
     }
+
+    public Vertex radd(Vertex that) {
+        return new Vertex(x += that.x,y += that.y);
+    }
     public void set(Vertex that) {
         x = that.x;
         y = that.y;

@@ -13,7 +13,7 @@ public record TextObject( Vertex pos, Vertex velocity
     }
 
     @Override
-    public void paintTo(Graphics g){
+    public void paintTo(Graphics g, Vertex translate){
         g.setFont(new Font(fontName, Font.PLAIN, fontSize));
         g.drawString(text, (int)pos().x, (int)pos().y);
     }

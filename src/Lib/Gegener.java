@@ -55,13 +55,13 @@ public class Gegener implements GameObject{
     }
 
     @Override
-    public void paintTo(Graphics g){
+    public void paintTo(Graphics g, Vertex translate){
         Color color = g.getColor();
-        g.drawRect((int)pos.x, (int)pos.y-10, (int)(width), (int)5);
+        g.drawRect((int)(pos.x - translate.getX()), (int)(pos.y - translate.getY() - 10), (int)(width), (int)5);
         g.setColor(Color.red);
-        g.fillRect((int)pos.x, (int)pos.y-10, (int)((width/maxHealth)*health), (int)5);
+        g.fillRect((int)(pos.x - translate.getX()), (int)(pos.y - translate.getY() - 10), (int)((width/maxHealth)*health), (int)5);
         g.setColor(color);
-        g.drawImage(image,(int)pos.x, (int)pos.y, null);
+        g.drawImage(image,(int)(pos.x - translate.getX()), (int)(pos.y - translate.getY()), null);
     }
 
     public Vertex getPos() {

@@ -25,7 +25,7 @@ public record ImageObject(Vertex pos, Vertex velocity
         this(new Vertex(0,0),new Vertex(0,0),fileName);
     }
 
-    public void paintTo(Graphics g){
+    public void paintTo(Graphics g, Vertex translate){
         g.drawImage(image(),(int)pos.x, (int)pos.y, null);
     }
 }

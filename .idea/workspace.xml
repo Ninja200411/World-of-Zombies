@@ -5,18 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9212f75d-5b63-446c-9f67-6ac87242a9b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Images/gegner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/player.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/playerbullet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/Gegener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/PlayerBullet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lib/Stats.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/bild/teil9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lib/Debugger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/WorldGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/WorldGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/FallingImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/FallingImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/Gegener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Gegener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/ImageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/ImageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/PlayerBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/PlayerBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Stats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/SwingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/SwingScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/TextObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/TextObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Vertex.java" afterDir="false" />
     </list>
@@ -36,6 +54,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,11 +77,12 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LarsHurst/Documents/Projects/ProjecktGame2dOOSE&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Larsh/IdeaProjects/ProjecktGame2dOOSE&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -120,6 +143,8 @@
       <workItem from="1674633855354" duration="277000" />
       <workItem from="1674663060542" duration="420000" />
       <workItem from="1674679209979" duration="2049000" />
+      <workItem from="1674726308065" duration="33000" />
+      <workItem from="1674726349200" duration="10287000" />
     </task>
     <servers />
   </component>

@@ -7,7 +7,7 @@ public interface GameObject {
     Vertex velocity();
     double width();
     double height();
-    void paintTo(Graphics g);
+    void paintTo(Graphics g, Vertex translate);
     default void move() {
         pos().add(velocity());
     }

@@ -13,13 +13,21 @@ public class Player implements GameObject {
     private static double damage = 1;
     private static double speed = 1;
     private static double health = 100;
-    private static double bulletspeed = 1;
+    private static double bulletspeed = 3;
+    private static double bulletdamage = 10;
     private static long reloadTime = 300;
-    private static LocalTime lasshot = LocalTime.now().minusNanos(reloadTime);
+    private static long lastdamgetaken;
+    private static long lastshot;
     private static double maxHealth = health;
 
+
     public String toString(){
-        return "Health: " + health + "\nMaxspeed: " + speed + "\nDamage: " +damage;
+        return "Health: " + health +
+                "\nMaxspeed: " + speed +
+                "\nDamage: " +damage +
+                "\nBulletspeed: " + bulletspeed +
+                "\nReloadtime: " + reloadTime +
+                "\nBulletdamage: " + bulletdamage;
     }
 
     public Player(Vertex pos,Vertex velocity, String fileName, double speed, double damage, double maxHealth){
@@ -33,6 +41,7 @@ public class Player implements GameObject {
         this.health = maxHealth;
         this.maxHealth = maxHealth;
         this.speed = speed;
+        lastshot = System.currentTimeMillis() - reloadTime;
 
     }
     public Player(Vertex pos, Vertex velocity, String fileName){
@@ -63,13 +72,13 @@ public class Player implements GameObject {
         return height;
     }
 
-    public void paintTo(Graphics g){
+    public void paintTo(Graphics g, Vertex translate){
         Color color = g.getColor();
-        g.drawRect((int)pos.x, (int)pos.y-10, (int)(width), (int)5);
+        g.drawRect((int)(pos.x - translate.getX()), (int)(pos.y - translate.getY() - 10), (int)(width), (int)5);
         g.setColor(Color.red);
-        g.fillRect((int)pos.x, (int)pos.y-10, (int)((width/maxHealth)*health), (int)5);
+        g.fillRect((int)(pos.x - translate.getX()), (int)(pos.y- translate.getY() - 10), (int)((width/maxHealth)*health), (int)5);
         g.setColor(color);
-        g.drawImage(image,(int)pos.x, (int)pos.y, null);
+        g.drawImage(image,(int)(pos.x - translate.getX()), (int)(pos.y - translate.getY()), null);
     }
 
     public Vertex getPos() {
@@ -160,12 +169,12 @@ public class Player implements GameObject {
         Player.reloadTime = reloadTime;
     }
 
-    public static LocalTime getLasshot() {
-        return lasshot;
+    public static long getLastshot() {
+        return lastshot;
     }
 
-    public static void setLasshot(LocalTime lasshot) {
-        Player.lasshot = lasshot;
+    public static void setLasshot(long lastshot) {
+        Player.lastshot = lastshot;
     }
 
     public static double getMaxHealth() {
@@ -175,4 +184,25 @@ public class Player implements GameObject {
     public static void setMaxHealth(double maxHealth) {
         Player.maxHealth = maxHealth;
     }
+
+    public static double getBulletdamage() {
+        return bulletdamage;
+    }
+
+    public static void setBulletdamage(double bulletdamage) {
+        Player.bulletdamage = bulletdamage;
+    }
+
+    public static long getLastdamgetaken() {
+        return lastdamgetaken;
+    }
+
+    public static void setLastdamgetaken(long lastdamgetaken) {
+        Player.lastdamgetaken = lastdamgetaken;
+    }
+
+    public static void setLastshot(long lastshot) {
+        Player.lastshot = lastshot;
+    }
+
 }
