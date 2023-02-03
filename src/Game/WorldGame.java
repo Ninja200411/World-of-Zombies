@@ -10,8 +10,10 @@ import static java.awt.event.KeyEvent.*;
 
 record WorldGame(Player player, List<List<? extends GameObject>> goss, int width, int height)
         implements Game {
-
+    static int test = 0;
+    private static boolean gamelost = false;
     private static final double Schrittweite = 1.2;
+
 
     private static boolean shooting = false;
     private static final long damgetakendelay = 500;
@@ -23,6 +25,7 @@ record WorldGame(Player player, List<List<? extends GameObject>> goss, int width
     static int mausX;
     static int mausY;
     static Point mousePos = new Point(0, 0);
+
 
     public void init() {
         random.setSeed(System.currentTimeMillis());
@@ -41,6 +44,43 @@ record WorldGame(Player player, List<List<? extends GameObject>> goss, int width
 
 
     public void keyPressedReaction(KeyEvent keyEvent) {
+        if(keyEvent.getKeyCode() == VK_1){
+            if(player().getPoints() >= 10){
+                player().setPoints(player().getPoints() - 10);
+                player().setMaxHealth(player().getMaxHealth() + 5);
+            }
+        }
+        if(keyEvent.getKeyCode() == VK_2){
+            if(player().getPoints() >= 10){
+                player().setPoints(player().getPoints() - 10);
+                player().setSpeed(player().getSpeed() + 0.5);
+            }
+        }
+        if(keyEvent.getKeyCode() == VK_3){
+            if(player().getPoints() >= 10){
+                player().setPoints(player().getPoints() - 10);
+                player().setDamage(player().getDamage() + 1);
+            }
+        }
+        if(keyEvent.getKeyCode() == VK_4){
+            if(player().getPoints() >= 10){
+                player().setPoints(player().getPoints() - 10);
+                player().setBulletspeed(player().getBulletspeed() + 0.5);
+            }
+        }
+        if(keyEvent.getKeyCode() == VK_5){
+            if(player().getPoints() >= 10 && player().getReloadTime() >= 10){
+                player().setPoints(player().getPoints() - 10);
+                player().setReloadTime(player().getReloadTime() - 5);
+            }
+        }
+        if(keyEvent.getKeyCode() == VK_6){
+            if(player().getPoints() >= 10){
+                player().setPoints(player().getPoints() - 10);
+                player().setBulletdamage(player().getBulletdamage() + 1);
+            }
+        }
+
         switch (keyEvent.getKeyCode()) {
             case VK_LEFT, VK_A -> {
                 if (player().velocity().getX() == 0) {
@@ -122,6 +162,8 @@ record WorldGame(Player player, List<List<? extends GameObject>> goss, int width
 
 
     public void doChecks() {
+        test += 1;
+        if (ended()) return;
         if (player.pos().getX() < 1000) {
             player.pos().setX(1000);
         }
@@ -153,16 +195,18 @@ record WorldGame(Player player, List<List<? extends GameObject>> goss, int width
         ArrayList<Gegener> gegenersToRemove = new ArrayList<Gegener>();
 
         for (int j = 0; j < gegeners.size(); j++) {
-
-            if (System.currentTimeMillis() - Player.getLastdamgetaken() >= damgetakendelay) {
-                if (gegeners.get(j).touches(player)) {
+            if (gegeners.get(j).touches(player)) {
+                if(gegeners.get(j).getLastdamgedealt() <= System.currentTimeMillis() ) {
                     Player.setHealth(Player.getHealth() - gegeners.get(j).getDamage());
+                    gegeners.get(j).setLastdamgedealt(System.currentTimeMillis() + 300);
+                }
+                if (Player.getLastdamgedealt() <= System.currentTimeMillis()) {
                     gegeners.get(j).setHealth(gegeners.get(j).getHealth() - Player.getDamage());
-                    Player.setLastdamgetaken(System.currentTimeMillis());
+                    Player.setLastdamgedealt(System.currentTimeMillis() + 300);
                 }
             }
             for (int i = 0; i < playerbullets.size(); i++) {
-                if (gegeners.get(j).touches(playerbullets.get(i))) {
+                if (gegeners.get(j).touches(playerbullets.get(i)) && !bulletsToRemove.contains(playerbullets.get(i))) {
                     gegeners.get(j).setHealth(gegeners.get(j).getHealth() - playerbullets.get(i).getDamage());
                     bulletsToRemove.add(playerbullets.get(i));
                 }
@@ -172,6 +216,7 @@ record WorldGame(Player player, List<List<? extends GameObject>> goss, int width
             if (gegeners.get(i).getHealth() <= 0) {
                 gegenersToRemove.add(gegeners.get(i));
                 player.setKills(player.getKills() + 1);
+                player.setPoints(player.getPoints() + 1);
             }
         }
         for (var bullet : bulletsToRemove) {
@@ -182,11 +227,15 @@ record WorldGame(Player player, List<List<? extends GameObject>> goss, int width
         }
         if (gegeners.size() == 0) {
             player.setWave(player.getWave() + 1);
-            for (int i = 0; i < player().getWave() + 100; i++) {
+            player.setHealth(player.getHealth() + player.getMaxHealth() / 10);
+            if(player.getHealth() > player.getMaxHealth()) {
+                player.setHealth(player.getMaxHealth());
+            }
+            player.setPoints(player.getPoints() + 10);
+            for (int i = 0; i < player().getWave() * 10; i++) {
                 gegeners.add(new Gegener(new Vertex(random.nextDouble(gameWidth) + 1000, random.nextDouble(gameHeight) + 1000), new Vertex(1), "Images/gegner.png", random.nextDouble(2.0) + 1, random.nextDouble(1.2) + 0.5, random.nextInt(50) * 2));
             }
         }
-
 
     }
 
@@ -198,6 +247,13 @@ record WorldGame(Player player, List<List<? extends GameObject>> goss, int width
 
     @Override
     public boolean lost() {
+        if (player.getHealth() <= 0) {
+            if (!gamelost) {
+                gamelost = true;
+                player.setEndtime(System.currentTimeMillis());
+            }
+            return true;
+        }
         return false;
     }
 }

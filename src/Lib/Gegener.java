@@ -13,6 +13,7 @@ public class Gegener implements GameObject {
     private double health;
     private double maxHealth;
     private double speed;
+    private static long lastdamgedealt;
 
 
     public Gegener(Vertex pos, Vertex velocity, String filename, double damage, double speed, double maxHealth) {
@@ -75,5 +76,13 @@ public class Gegener implements GameObject {
 
     public void setHealth(double shealth) {
         health = shealth;
+    }
+
+    public static long getLastdamgedealt() {
+        return lastdamgedealt;
+    }
+
+    public static void setLastdamgedealt(long lastdamgedealt) {
+        Gegener.lastdamgedealt = lastdamgedealt;
     }
 }

@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Player implements GameObject {
+    private int points = 0;
     private Vertex pos;
     private Vertex velocity;
     private double width;
@@ -12,19 +13,20 @@ public class Player implements GameObject {
     private Image image;
     private int kills = 0;
     private int wave = 0;
+    private long endtime = 0;
     private static double damage = 1;
     private static double speed = 1;
     private static double health = 100;
     private static double bulletspeed = 3;
     private static double bulletdamage = 10;
     private static long reloadTime = 300;
-    private static long lastdamgetaken;
+    private static long lastdamgedealt;
     private static long lastshot;
     private static double maxHealth = health;
 
 
     public String toString() {
-        return "Health: " + health + "\nMaxspeed: " + speed + "\nDamage: " + damage + "\nBulletspeed: " + bulletspeed + "\nReloadtime: " + reloadTime + "\nBulletdamage: " + bulletdamage;
+        return "Health: " + (int)health + "\n1) Max Health: "+ maxHealth +"\n2) Max Speed: " + speed + "\n3) Damage: " + damage + "\n4) Bullet Speed: " + bulletspeed + "\n5) Reloadtime: " + reloadTime + "\n6) Bullet Damage: " + bulletdamage + "\n   Points: " + points;
     }
 
     public Player(Vertex pos, Vertex velocity, String fileName, double speed, double damage, double maxHealth) {
@@ -126,12 +128,12 @@ public class Player implements GameObject {
         return bulletdamage;
     }
 
-    public static long getLastdamgetaken() {
-        return lastdamgetaken;
+    public static long getLastdamgedealt() {
+        return lastdamgedealt;
     }
 
-    public static void setLastdamgetaken(long lastdamgetaken) {
-        Player.lastdamgetaken = lastdamgetaken;
+    public static void setLastdamgedealt(long lastdamgedealt) {
+        Player.lastdamgedealt = lastdamgedealt;
     }
 
     public static void setLastshot(long lastshot) {
@@ -152,5 +154,89 @@ public class Player implements GameObject {
 
     public void setWave(int wave) {
         this.wave = wave;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public void setPos(Vertex pos) {
+        this.pos = pos;
+    }
+
+    public Vertex getVelocity() {
+        return velocity;
+    }
+
+    public void setVelocity(Vertex velocity) {
+        this.velocity = velocity;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
+    public static void setDamage(double damage) {
+        Player.damage = damage;
+    }
+
+    public static double getSpeed() {
+        return speed;
+    }
+
+    public static void setSpeed(double speed) {
+        Player.speed = speed;
+    }
+
+    public static void setBulletspeed(double bulletspeed) {
+        Player.bulletspeed = bulletspeed;
+    }
+
+    public static void setBulletdamage(double bulletdamage) {
+        Player.bulletdamage = bulletdamage;
+    }
+
+    public static void setReloadTime(long reloadTime) {
+        Player.reloadTime = reloadTime;
+    }
+
+    public static double getMaxHealth() {
+        return maxHealth;
+    }
+
+    public static void setMaxHealth(double maxHealth) {
+        Player.maxHealth = maxHealth;
+    }
+
+    public long getEndtime() {
+        return endtime;
+    }
+
+    public void setEndtime(long endtime) {
+        this.endtime = endtime;
     }
 }

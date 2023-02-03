@@ -8,8 +8,9 @@ public class Stats implements GameObject {
     private final Vertex velocity;
     private final double width;
     private final double heigth;
-    private final int fontSize;
+    private int fontSize;
     private final String fontName;
+    private Color colorfont = Color.WHITE;
 
 
     public Stats(Vertex pos, Vertex velocity, double width, double heigth, int fontSize, String fontName, String text) {
@@ -50,7 +51,7 @@ public class Stats implements GameObject {
     public void paintTo(Graphics g, Vertex translate) {
         String[] teiltext = text.split("\n");
         Color c = g.getColor();
-        g.setColor(Color.WHITE);
+        g.setColor(colorfont);
         g.setFont(new Font(fontName, Font.PLAIN, fontSize));
         for (int i = 0; i < teiltext.length; i++) {
             g.drawString(teiltext[i], (int) pos().x, (int) (pos().y + fontSize * i));
@@ -66,5 +67,20 @@ public class Stats implements GameObject {
 
     public void setPos(Vertex pos) {
         this.pos = pos;
+    }
+
+    public int getFontSize() {
+        return fontSize;
+    }
+    public void setFontSize(int fontSize) {
+        this.fontSize = fontSize;
+    }
+
+    public Color getColorfont() {
+        return colorfont;
+    }
+
+    public void setColorfont(Color colorfont) {
+        this.colorfont = colorfont;
     }
 }

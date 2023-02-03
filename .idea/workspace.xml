@@ -7,21 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9212f75d-5b63-446c-9f67-6ac87242a9b0" name="Changes" comment="Player kann schießen">
+    <list default="true" id="9212f75d-5b63-446c-9f67-6ac87242a9b0" name="Changes" comment="Verbesserung der Preformenc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/WorldGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/WorldGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/AbstractGameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/AbstractGameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/Debugger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/FallingImage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/GameObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/Gegener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Gegener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/ImageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/ImageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/PlayerBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/PlayerBullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Stats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/SwingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/SwingScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/TextObject.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +60,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -134,8 +126,18 @@
       <workItem from="1674745169281" duration="338000" />
       <workItem from="1674803022002" duration="4634000" />
       <workItem from="1675085252168" duration="237000" />
-      <workItem from="1675090302028" duration="10460000" />
+      <workItem from="1675090302028" duration="11703000" />
+      <workItem from="1675238447641" duration="24000" />
+      <workItem from="1675350895986" duration="8239000" />
     </task>
+    <task id="LOCAL-00001" summary="Verbesserung der Preformenc">
+      <created>1675161712211</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675161712211</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,5 +156,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Verbesserung der Preformenc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Verbesserung der Preformenc" />
   </component>
 </project>

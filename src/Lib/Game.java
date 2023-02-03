@@ -51,14 +51,29 @@ public interface Game {
 
 
     default void move() {
-        if (ended()) return;
-        player().move();
-        playerbullets.forEach(playerBullet -> playerBullet.move());
-        for (var gos : goss()) gos.forEach(go -> go.move());
-        gegeners.forEach(gegener -> gegener.move(new Vertex(player().pos().getX() + player().width() / 2, player().pos().getY() + player().height() / 2)));
-        stats.setText(player().toString());
-        Gamestats.setPos(new Vertex(Windowsize.x / 2, 20));
-        Gamestats.setText("Wave: " + player().getWave() + "\n Gegner: " + gegeners.size() + "\n Kills:" + player().getKills() + "\n Time: " + (System.currentTimeMillis() - startTime) / 1000);
+        if (!ended()) {
+            player().move();
+            playerbullets.forEach(playerBullet -> playerBullet.move());
+            for (var gos : goss()) gos.forEach(go -> go.move());
+            gegeners.forEach(gegener -> gegener.move(new Vertex(player().pos().getX() + player().width() / 2, player().pos().getY() + player().height() / 2)));
+            stats.setText(player().toString());
+            Gamestats.setPos(new Vertex(Windowsize.x / 2, 20));
+            Gamestats.setText("Wave: " + player().getWave() + "\n Gegner: " + gegeners.size() + "\n Kills:" + player().getKills() + "\n Time: " + (System.currentTimeMillis() - startTime) / 1000);
+        } else {
+            stats.setText(player().toString());
+            Gamestats.setPos(new Vertex(Windowsize.x / 2, 20));
+            Gamestats.setText("Wave: " + player().getWave() + "\n Gegner: " + gegeners.size() + "\n Kills:" + player().getKills() + "\n Time: " + (System.currentTimeMillis() - startTime) / 1000);
+            if (won()) {
+                Gamestats.setText("You won!\n Time: " + (System.currentTimeMillis() - startTime) / 1000);
+            } else if (lost()) {
+                Gamestats.setText("You lost!\nTime: " + (player().getEndtime() - startTime) / 1000 + "\nKills: " + player().getKills() + "\nWave: " + player().getWave());
+                Gamestats.setPos(new Vertex(Windowsize.x / 2, Windowsize.y / 2));
+                int f = Gamestats.getFontSize();
+                Gamestats.setFontSize(50);
+                Gamestats.setColorfont(Color.ORANGE);
+
+            }
+        }
     }
 
 
