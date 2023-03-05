@@ -19,7 +19,7 @@ public class Player implements GameObject {
     private static double health = 100;
     private static double bulletspeed = 3;
     private static double bulletdamage = 10;
-    private static long reloadTime = 300;
+    private static long reloadTime = 1500;
     private static long lastdamgedealt;
     private static long lastshot;
     private static double maxHealth = health;

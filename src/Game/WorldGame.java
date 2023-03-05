@@ -69,9 +69,9 @@ record WorldGame(Player player, List<List<? extends GameObject>> goss, int width
             }
         }
         if(keyEvent.getKeyCode() == VK_5){
-            if(player().getPoints() >= 10 && player().getReloadTime() >= 10){
+            if(player().getPoints() >= 10 && player().getReloadTime() >= 300){
                 player().setPoints(player().getPoints() - 10);
-                player().setReloadTime(player().getReloadTime() - 5);
+                player().setReloadTime(player().getReloadTime() - 10);
             }
         }
         if(keyEvent.getKeyCode() == VK_6){

@@ -16,7 +16,7 @@ Stats:
 - Bewegungsgeschwindigkeit: 1 (für jedes Upgrade +0.5)
 - Schaden: 1 (für jedes Upgrade +1)
 - Patronengeschwindigkeit: 3 (für jedes Upgrade +0.5)
-- Nachladegeschwindigkeit: 300 (für jedes Upgrade -5, maximal 10)
+- Nachladegeschwindigkeit: 1500 (für jedes Upgrade -10, maximal 300)
 - Patronenschaden: 1 (für jedes Upgrade +1)
 - Punkte: 0 (für jeden Kill +1, für jede Welle +10)
 - Welle: 0 (für jede Welle +1)
