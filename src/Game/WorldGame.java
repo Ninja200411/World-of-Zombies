@@ -141,6 +141,8 @@ record WorldGame(Player player, List<List<? extends GameObject>> goss, int width
     public void mousePressedReaction(MouseEvent mouseEvent) {
         if (mouseEvent.getButton() == MouseEvent.BUTTON1) {
             shooting = true;
+            mausX = mouseEvent.getX();
+            mausY = mouseEvent.getY();
         }
     }
 
