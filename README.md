@@ -1,3 +1,4 @@
+# World of Zombies - Spielbeschreibung von Lars Hurst WS 2022/23 Hochschule RheinMain
 ## Spielidee
 Meine Idee war ein Spiel zu entwickeln, dass so ähnlich ist wie "Vampire Survivor". In dem Spiel soll man in Wellen gegen Zombies kämpfen. Dies Wellen werden von Zeit zu Zeit schwerer. Durch jeden Kill und durch jede abgeschlossene Welle soll man Punkte bekommen. Diese Punkte können dann in Upgrades investiert werden. Die Upgrades sollen die Waffen stärker machen, die Lebenspunkte erhöhen oder die Schadensrate erhöhen.
 ## Spielziel
@@ -29,7 +30,7 @@ Eine Welle ist abschlossen, wenn alle Zombies tot sind. Dann wird die nächste W
 Der Spieler erleidet Schaden, wenn er mit einem Zombie kollidiert.
 ### Spielende
 Das Spiel ist vorbei, wenn der Spieler keine Leben mehr hat.
-## Markante Features
+## Markantes Features
 ### Schießen über die Maus
 Ich habe von der Klasse Mausadapter die Methode mousePressed, mouseReleased und mouseDragged implementiert und überschrieben. Dann schaue ich ob die Maustaste gedrückt ist und wenn ja, dann wird die Methode shoot aufgerufen. Diese berechnet dann die Richtung in die geschossen werden soll, normalisiert ihn und erstellt dann ein neues Bullet-Objekt. Dieses wird dann in die Liste der Bullets geschrieben. bwegt sich in dir Richtung des zuvor berechnete Vektors und wird dann gelöscht, wenn es die Grenzen des Spielfeldes überschreitet oder einen Gegner berührt.
 ## Quellen
@@ -38,4 +39,6 @@ Alle Bilder sind von mir selbst gemacht.
 Außer dem Hintergrund, der ist von "https://szadiart.itch.io/rogue-fantasy-catacombs?download" ("--- License for Everyone ---
 Public domain and free to use. personal or commercial. Credit is not required but appreciated. You can edit, but not resell the asset pack (original or changed)")
 ### Code
-Der Code ist von mir selbst geschrieben und baut teilweise auf ihrer Bibliothek auf. Manchmal hat mich beim Programmieren Stackoverflow("https://stackoverflow.com/") und Javabeginners("https://javabeginners.de/") unterstützt.
+Der Code ist von mir selbst geschrieben und baut teilweise auf ihrer Bibliothek auf. Manchmal hat mich beim Programmieren Stackoverflow("https://stackoverflow.com/") und Javabeginners("https://javabeginners.de/") 
+
+Unterschrift: _____________
