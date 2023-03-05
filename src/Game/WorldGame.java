@@ -33,7 +33,7 @@ record WorldGame(Player player, List<List<? extends GameObject>> goss, int width
         goss().clear();
         mausX = 0;
         mausY = 0;
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 5; i++) {
             gegeners.add(new Gegener(new Vertex(random.nextDouble(gameWidth) + 1000, random.nextDouble(gameHeight) + 1000), new Vertex(1), "Images/gegner.png", random.nextDouble(2.0) + 1, random.nextDouble(1.2) + 0.5, random.nextInt(50) * 2));
         }
     }
@@ -235,7 +235,7 @@ record WorldGame(Player player, List<List<? extends GameObject>> goss, int width
             }
             player.setPoints(player.getPoints() + 10);
             for (int i = 0; i < player().getWave() * 10; i++) {
-                gegeners.add(new Gegener(new Vertex(random.nextDouble(gameWidth) + 1000, random.nextDouble(gameHeight) + 1000), new Vertex(1), "Images/gegner.png", random.nextDouble(2.0) + 1, random.nextDouble(1.2) + 0.5, random.nextInt(50) * 2));
+                gegeners.add(new Gegener(new Vertex(random.nextDouble(gameWidth) + 1000, random.nextDouble(gameHeight) + 1000), new Vertex(1), "Images/gegner.png", random.nextDouble(2.0) + (1 * (0.1 * player().getWave())), random.nextDouble(1.2) + (0.5 * (0.1 * player().getWave())), random.nextInt(50) * (2 * (0.1 * player().getWave()))));
             }
         }
 
