@@ -40,5 +40,3 @@ Außer dem Hintergrund, der ist von "https://szadiart.itch.io/rogue-fantasy-cata
 Public domain and free to use. personal or commercial. Credit is not required but appreciated. You can edit, but not resell the asset pack (original or changed)")
 ### Code
 Der Code ist von mir selbst geschrieben und baut teilweise auf ihrer Bibliothek auf. Manchmal hat mich beim Programmieren Stackoverflow("https://stackoverflow.com/") und Javabeginners("https://javabeginners.de/") 
-
-Unterschrift: _____________
